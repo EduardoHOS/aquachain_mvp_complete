@@ -100,6 +100,21 @@ For a local demonstration, run the mock API and the frontend development server:
 
 3.  **Interact:** Open `http://localhost:3000` in your browser. Connect your Sui wallet (ensure it's set to **Testnet**). Interact with the Aquarium, Stats, Actions, and Sponsor panels.
 
+## 📘 Frontend Configuration
+
+Abra `frontend/src/config/constants.ts` e atualize com os IDs gerados durante o deploy:
+
+```ts
+// /frontend/src/config/constants.ts
+
+export const PACKAGE_ID =
+  "0x855a7ecdcc2a466ca24fa71e6cf12aaa2a172cfaa72aeb26c92b5f642c1d892d";
+export const ECOSYSTEM_STATE_ID =
+  "0x90ce1902edc62a06fbdfb40780403493f1a5573bbbc1cf185a87e15eba587a01";
+export const TREASURY_CAP_ID =
+  "0x9fbd7e54e4eeff730cf8c425f0da91b473742184e849a2b8892588cdbd74832a";
+
+
 ## 📜 Contract Deployment Guide (Testnet Example)
 
 **IMPORTANT:** The frontend code currently uses placeholder IDs. You **MUST** replace these after deploying your contracts.
