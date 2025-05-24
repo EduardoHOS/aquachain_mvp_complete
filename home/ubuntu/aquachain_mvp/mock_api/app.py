@@ -1,8 +1,11 @@
 # /home/ubuntu/aquachain_mvp/mock_api/app.py
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import random
 
 app = Flask(__name__)
+# Enable CORS for all routes and origins
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- Mock Data Store ---
 # In a real scenario, this would interact with a database or external services
@@ -106,4 +109,3 @@ if __name__ == "__main__":
     # Listen on all interfaces (0.0.0.0) and a common port (e.g., 5001)
     # Use a different port than the Next.js default (3000)
     app.run(host="0.0.0.0", port=5001, debug=True)
-
